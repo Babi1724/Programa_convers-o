@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<string.h>
+
+int main(void)
+{
+    char nomes[50][100];
+    int i,j,alteracao;
+    
+    for(i=;i<=5;i++){
+        printf("Informe o %do nome: ",i+1);
+        fgets(nomes[i],50,stdin);
+        fflush(stdin);
+    }
+    
+    for(i=0;i<=5;i++){
+        for(j=0;j<strlen(nomes[i])-1;j++){
+            nomes[i][j] = nomes[i][j]-32;
+        }
+    }
+    
+    for(i=0;i<5;i++){
+        printf("\n%s",nomes[i]);
+        alteracao ++;
+    }
+    
+    printf("A quantidade de alteracao feita é:%d",alteracao);
+
+    return 0;
+}
